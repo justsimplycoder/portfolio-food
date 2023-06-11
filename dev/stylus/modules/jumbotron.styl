@@ -2,19 +2,24 @@
 	.jumbotron - модуль для демонстрации ключевого содержимого сайта
  -----------------------------------------------------------------*/
 .jumbotron
-	min-height: 280px
-	border-radius calc(2 * var(--borderRadius))
-	background-color #95c8e2
-	background-image url(/img/jumbotron.png)
-	background-position 10px 10px
-	background-size auto 100%
-	background-repeat no-repeat
-	padding 1.5em 2em 1em 29.4em
+	display flex
+	justify-content center
+	align-items center
+	background-color var(--colorPink)
+	background url(../img/bg.jpg)
+	background-size cover
+	&__content
+		max-width: 1100px
+		padding 0 20px
+		text-align center
 	&__header
-		font-size 3rem
-		margin .4em 0 .4em 0
+		font-size 5rem
+		color var(--colorWhite)
+		padding-bottom .3em
+		// +mema(700px)
+		@media screen and (max-width: 700px)
+			font-size 4rem
 	&__text
-		font-size 2rem
-		margin 0 0 .5em 0
-	&__link
-		display inline-block
+		color var(--colorWhite)
+	&__btn
+		margin-top 20px

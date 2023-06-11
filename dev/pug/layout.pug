@@ -9,43 +9,37 @@ html(lang="ru")
 		meta(name="description", content="")
 		meta(name="viewport", content="width=device-width,initial-scale=1")
 		link(rel="preconnect" href="https://fonts.gstatic.com")
-		link(href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet")
-		link(rel="stylesheet", href="/css/swiper-bundle.min.css")
+		link(href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet")
 		// build:css
 		link(rel="stylesheet", href="/css/main.css")
-		link(rel="stylesheet", type="text/css", href="/css/print.css", media="print")
 		// endbuild
 		block title
-			title SMACSS
+			title Еда
 
 		block top-script
 
 	body
 		header#l-header
-			#l-header-menu
-				.l-page-width
-					+nav(nav)
-					span.hamburger
-			#l-header-title
-				.l-page-width
-					a(href="/")
-						img(src="/img/jack-head.png", alt="smacss site")
-					div
-						h2 SMACSS — масштабируемая и модульная архитектура CSS
-						p Создание сайтов малых и средних размеров.
-		// /header#l-header
+			a(href="/" id="l-logo") Еда<span>.ру</span>
+			.hamburger
+			nav.nav
+				a(href="#l-banner").nav__link Главная
+				a(href="#l-about").nav__link О нас
+				a(href="#l-menu").nav__link Меню
+				a(href="#l-expert").nav__link Эксперты
+				a(href="#l-testimonials").nav__link Рекомендации
+				a(href="#l-content").nav__link Контакты
+		// /header.l-header
 
 		#l-content
-			.l-page-width
-				block content
-		// /#l-content
+			block content
+		// /.l-content
 
 		footer#l-footer
-			.l-page-width.b-text-center(style="display:block") Copyright <a href="https://github.com/justsimplycoder/SMACSS">justsimplycoder GitHub</a>
-		// /footer#l-footer
+			p Copyright <a href="mailto:edaru@gmail.com">edaru@gmail.com</a>
+		// /footer.l-footer
 
 		block bottom-script
-			script(src="/js/swiper-bundle.min.js")
-			// build:js_bottom
-			script(src="/js/script.js", type="module")
+			// build:js
+			script(src="js/script.js")
 			// endbuild

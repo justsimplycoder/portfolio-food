@@ -1,9 +1,86 @@
 extends layout.pug
 
-block title
-	title SMACSS
-
 block content
-	p.b-text-center: img(src="img/book-covers.png", alt="Обложка книги по SMACSS")
-	h1.b-text-center SMACSS — Scalable and Modular Architecture for CSS
-	p.b-text-center <a href="http://smacss.com/"> smacss.com</a> — сайт разработчика методологии
+	main#l-jumbotron.jumbotron
+		.jumbotron__content
+			h2.jumbotron__header Всегда выбирай хорошее
+			p.jumbotron__text Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur.
+			a(href="#").btn.jumbotron__btn Наше меню
+	section#l-about
+		.l-row
+			.l-col
+				h2 <span class="is-large">О</span> нас
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+			.l-col
+				img(src="img/img1.jpg" alt="")
+	section#l-menu
+		header
+			h2 Наше <span class="is-large">м</span>еню
+			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+		.l-content
+			.l-box
+				img(src="img/menu1.jpg" alt="Итальянская паста")
+				h3 Итальянская паста
+			.l-box
+				img(src="img/menu2.jpg" alt="Свежий салат")
+				h3 Свежий салат
+			.l-box
+				img(src="img/menu3.jpg" alt="Горячий суп")
+				h3 Горячий суп
+			.l-box
+				img(src="img/menu4.jpg" alt="Итальянская паста")
+				h3 Итальянская паста
+			.l-box
+				img(src="img/menu5.jpg" alt="Свежий салат")
+				h3 Свежий салат
+			.l-box
+				img(src="img/menu6.jpg" alt="Горячий суп")
+				h3 Горячий суп
+		.l-footer
+			a(href="#" class="btn") Посмотреть всё
+	section#l-expert
+		header
+			h2 Наши <span class="is-large">э</span>ксперты по кухне
+			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+		.l-content
+			.l-box
+				img(src="img/expert1.jpg" alt)
+				h3 Кто-то известный
+			.l-box
+				img(src="img/expert2.jpg" alt)
+				h3 Кто-то известный
+			.l-box
+				img(src="img/expert3.jpg" alt)
+				h3 Кто-то известный
+			.l-box
+				img(src="img/expert4.jpg" alt)
+				h3 Кто-то известный
+	section#l-testimonials
+		header
+			h2 Они <span class="is-large">р</span>екомендуют нас
+			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+		.l-content
+			.l-box
+				img(src="img/testi1.jpg" alt)
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+				h3 Кто-то известный
+			.l-box
+				img(src="img/testi2.jpg" alt)
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+				h3 Кто-то известный
+			.l-box
+				img(src="img/testi3.jpg" alt)
+				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+				h3 Кто-то известный
+	section#l-contact
+		header
+			h2 <span class="is-large">К</span>онтакты
+			p Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+		form(action="" method="POST" class="l-contact-form")
+			fieldset
+				legend Отправить сообщение
+				input(type="text" placeholder="Имя")
+				input(type="text" placeholder="Email")
+				textarea(placeholder="Сообщение")
+				button(type="submit" class="btn") Отправить

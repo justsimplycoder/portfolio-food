@@ -3,30 +3,29 @@
  -----------------------------------------------------------------*/
 .btn
 	cursor: pointer
-	border-radius var(--borderRadius)
 	text-decoration none
 	display: inline-block
 	font-weight: normal
 	line-height: 1.25
-	text-align: center
 	white-space: nowrap
+	vertical-align: middle
 	user-select: none
-	border: 1px solid transparent
-	padding 8px 12px
 	font-size: 1rem
 	transition: all 0.2s ease-in-out
-	color: var(--colorBlack)
-	background-color var(--colorGray)
+	color var(--colorWhite)
+	background-color var(--colorPink)
+	border 0
+	letter-spacing 2px
+	padding 10px 30px
+	transition .5s
 
-	&.t-disable
-	&[disabled]
-		opacity .65
-		cursor default
-	&:focus
-		outline: 0
-		box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.25)
 	&:focus, &:hover
 		text-decoration: none
-		color: var(--colorBlack)
-	a&
-		margin-right .25rem
+		letter-spacing 6px
+		color var(--colorWhite)
+	&:focus, &.is-focus
+		outline: 0
+
+	&.is-disable
+	&[disabled]
+		opacity .65
